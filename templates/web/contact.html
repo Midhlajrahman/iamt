@@ -1,0 +1,92 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>contact </h2>
+                    <ul>
+                        <li><a href="{% url "web:index" %}">home</a></li>
+                        <li>/</li>
+                        <li>contact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section padding-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-contact-info">
+                        <i class="fa fa-building-o"></i>
+                        <h4>Office</h4>
+                        <p class="margin-top-10">Pazhayangadi  <br>KONDOTTY  673638</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-contact-info">
+                        <i class="fa fa-phone"></i>
+                        <h4>phone number</h4>
+                        <p class="margin-top-10">68 Landsriver St, Welson <br>California 22066</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-contact-info">
+                        <i class="fa fa-envelope-o"></i>
+                        <h4>email address</h4>
+                        <p class="text-lowercase margin-top-10">info@scholarl.com <br>support@scholarl.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding-top-30">
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <form method="POST" class="ajax redirect" data-redirect="/">
+                            {% csrf_token %}
+                            {{ form.name }}
+                            {{ form.email }}
+                            {{ form.phone_number }}
+                            {{ form.message }}
+                            <button type="submit" class="template-btn">send message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="google-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1957.2618748569846!2d75.95898679839476!3d11.148803600000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64f1c471d632d%3A0x7e7719dce208d2c8!2sPazhayangadi%20Sunni%20Masjid!5e0!3m2!1sen!2sin!4v1715853172117!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <!-- Back Top -->
+    <div class="back-to-top">
+        <span><i class="fa fa-angle-up"></i></span>
+    </div>
+
+{% endblock %}
+{% block js %}
+<script src="{% static "web/js/sweetalert2.all.min.js" %}"></script>
+<script src="{% static "web/js/ajax.js" %}"></script>
+{% endblock js %}
+

@@ -1,0 +1,130 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>about</h2>
+                    <ul>
+                        <li><a href="{% url "web:index" %}">home</a></li>
+                        <li>/</li>
+                        <li>about</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section about-section-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".1s">
+                    <div class="image-area">
+                        <img src="{% static 'web/images/2.png' %}" class="main-image" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
+                    <div class="about-content">
+                        <h2>Welcome to IAMT-Institute Of Advanced Mobile phone Technology</h2>
+                        <span class="divider"></span>
+                        <p>At IAMT, we are dedicated to shaping the future of mobile technology professionals. Located in Malappuram, Kerala, our institute offers top-tier training in smartphone servicing, backed by over 17 years of industry and technical expertise. Our comprehensive programs, led by certified trainers, cover advanced chip-level repairs and the latest in smartphone technology. We pride ourselves on providing a 100% job placement assurance, ensuring our graduates are equipped for success. With state-of-the-art facilities, practical on-the-job training, and additional courses in computer hardware and languages, IAMT is your gateway to a thriving career in mobile technology. Join us to transform your passion into a thriving career.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team Section -->
+    {% if students %}
+    <section class="team-section padding-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Meet Our Experts</h2>
+                        <p class="margin-top-10">At IAMT in Malappuram, Kerala, we provide expert training in smartphone servicing with 17 years of experience and 100% job placement assurance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top-50">
+                {% for student in students %}
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="{{student.image.url}}" alt="image" style="height: 255px;object-fit: cover;">
+                        </div>
+                        <div class="member-content">
+                            <h4 class="title">{{student.name}}</h4>
+                            <span>{{student.position}}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% else %}
+    {% endif %}
+
+    <!-- Feedback Section -->
+    {% if testimonials %}
+    <section class="feedback-section padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>feedback from students</h2>
+                        <p class="margin-top-10">Discover What Our Graduates Have to Say</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-slider margin-top-30">
+                {% for testimonial in testimonials %}
+                <div class="single-feedback">
+                    <span class="quote-icon"><i class="fa fa-quote-right"></i></span>
+                    <div class="reviewer-info d-flex align-items-center">
+                        <div class="reviewer-image margin-right-20">
+                            <img src="{{testimonial.image.url}}" alt="image">
+                        </div>
+                        <div class="reviewer-text">
+                            <h4 class="title">{{testimonial.name}}</h4>
+                            <span class="designation">{{testimonial.position}}</span>
+                        </div>
+                    </div>
+                    <p class="margin-top-20">{{testimonial.description}}</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+    {% else %}
+    {% endif %}
+
+    <!-- Blog Section -->
+    
+
+    <!-- Footer Section -->
+
+    <!-- Back Top -->
+    <div class="back-to-top">
+        <span><i class="fa fa-angle-up"></i></span>
+    </div>
+{% endblock %}

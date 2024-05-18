@@ -1,0 +1,303 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section -->
+
+    <!-- Hero Section 02 -->
+    <section class="hero-section-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <span class="tagline">IAMT - Institute Of Advanced Mobile phone Technology</span>
+                        <h1 class="margin-top-20">Empower Your Future in Mobile Technology</h1>
+                        <p class="margin-top-20">
+                            Kerala's Leading Institute for Advanced Smartphone Service Training with 100% Job Placement Assurance
+
+                        </p>
+                        <div class="button-part margin-top-40">
+                            <a href="#" class="template-btn" data-toggle="modal" data-target="#exampleModalScrollable">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="hero-image">
+                        <img src="{% static 'web/images/banner.png' %}" alt="hero-image" class="main-image">
+                        <div class="shape-image">
+                            <img src="{% static 'web/images/home-2-hero-shape.png' %}" alt="shape" class="hero-shape item-rotate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section about-section-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".1s">
+                    <div class="image-area">
+                        <img src="{% static 'web/images/about-image.png' %}" class="main-image" alt="image">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
+                    <div class="about-content">
+                        <h2>Welcome to IAMT-Institute Of Advanced Mobile phone Technology</h2>
+                        <span class="divider"></span>
+                        <p>At IAMT, we are dedicated to shaping the future of mobile technology professionals. Located in Malappuram, Kerala, our institute offers top-tier training in smartphone servicing, backed by over 17 years of industry and technical expertise. Our comprehensive programs, led by certified trainers, cover advanced chip-level repairs and the latest in smartphone technology. We pride ourselves on providing a 100% job placement assurance, ensuring our graduates are equipped for success. With state-of-the-art facilities, practical on-the-job training, and additional courses in computer hardware and languages, IAMT is your gateway to a thriving career in mobile technology. Join us to transform your passion into a thriving career.</p>
+                        
+                        <div class="about-button margin-top-40">
+                            <a href="{% url "web:course" %}" class="template-btn">Explore Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2> Why Choose IAMT?</h2>
+                        <p class="margin-top-10">Experience Excellence in Smartphone Service Training
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="category-slider">
+                <div class="single-category">
+                    <div class="category-image margin-bottom-30">
+                        <img src="{% static 'web/images/Expert.svg' %}" alt="icon">
+                    </div>
+                    <h5><a href="#">Expert Faculty</a></h5>
+                    <span class="margin-top-10"> Learn from certified technicians with 17+ years of experience.</span>
+                </div>
+                <div class="single-category" style="height: 300px;">
+                    <div class="category-image margin-bottom-30">
+                        <img src="{% static 'web/images/Advanced.svg' %}" alt="icon">
+                    </div>
+                    <h5><a href="#">Advanced Training</a></h5>
+                    <span class="margin-top-10"> Master the latest smartphone repair techniques.
+                    </span>
+                </div>
+                <div class="single-category">
+                    <div class="category-image margin-bottom-30">
+                        <img src="{% static 'web/images/Comprehensive.svg' %}" alt="icon">
+                    </div>
+                    <h5><a href="#">Comprehensive Program</a></h5>
+                    <span class="margin-top-10"> 8-month course with training and on-the-job experience.</span>
+                </div>
+                <div class="single-category">
+                    <div class="category-image margin-bottom-30">
+                        <img src="{% static 'web/images/Placement.svg' %}" alt="icon">
+                    </div>
+                    <h5><a href="#">Job Placement Assurance</a></h5>
+                    <span class="margin-top-10"> Enjoy 100% job placement across India.</span>
+                </div>
+                <div class="single-category">
+                    <div class="category-image margin-bottom-30">
+                        <img src="{% static 'web/images/Modern.svg' %}" alt="icon">
+                    </div>
+                    <h5><a href="#">Modern Facilities</a></h5>
+                    <span class="margin-top-10"> Train in state-of-the-art labs with advanced technology.
+                    </span>
+                </div>
+                <div class="single-category">
+                    <div class="category-image margin-bottom-30">
+                        <img src="{% static 'web/images/Additional.svg' %}" alt="icon">
+                    </div>
+                    <h5><a href="#">Additional Skills</a></h5>
+                    <span class="margin-top-10"> Free courses in computer hardware, English, and Hindi.
+
+                    </span>
+                </div>
+                <div class="single-category">
+                    <div class="category-image margin-bottom-30">
+                        <img src="{% static 'web/images/Holistic.svg' %}" alt="icon">
+                    </div>
+                    <h5><a href="#">Holistic Development</a></h5>
+                    <span class="margin-top-10"> Physical training, meditation, and accommodations.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 wow fadeInLeft" data-wow-delay=".1s">
+                    <div class="video-content">
+                        <span class="tagline">IAMT</span>
+                        <h2 class="margin-top-20">Unlock the Benefits of Choosing IAMT</h2>
+                        <p class="margin-top-20">Discover the unparalleled advantages awaiting you at IAMT. From expert guidance and cutting-edge training to guaranteed job placements and additional skill development, our institute is committed to empowering your journey towards a successful career in smartphone service. Explore the myriad benefits that set IAMT apart and propel you towards excellence in the mobile technology industry.</p>
+                        <span class="phone-number margin-top-20"><a href="tel:+919995184291" style="color:#fff;">Call Us +919995184291</a></span>
+                        <div class=" about-button margin-top-40">
+                            <a href="contact.html" class="template-btn" style="background-color:#F16A6D;">contact now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7  wow fadeInRight" data-wow-delay=".1s">
+                    <div class="video-area">
+                        <img src="{% static 'web/images/benefit.png' %}" alt="image">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    {% if testimonials %}
+    <section class="feedback-section feedback-section-2 padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2> Feedback From Students</h2>
+                        <p class="margin-top-10">Discover What Our Graduates Have to Say</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-slider margin-top-30">
+                {% for testimonial in testimonials %}
+                <div class="single-feedback">
+                    <span class="quote-icon"><i class="fa fa-quote-right"></i></span>
+                    <div class="reviewer-info d-flex align-items-center">
+                        <div class="reviewer-image margin-right-20">
+                            <img src="{{testimonial.image.url}}" alt="image">
+                        </div>
+                        <div class="reviewer-text">
+                            <h4 class="title">{{testimonial.name}}</h4>
+                            <span class="designation">{{testimonial.position}}</span>
+                        </div>
+                    </div>
+                    <p class="margin-top-20">{{testimonial.description}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% else %}
+    {% endif %}
+    <!-- Teaching Section -->
+    <section class="teaching-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="teaching-image">
+                        <img src="{% static 'web/images/teaching-image.png' %}" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="teaching-content padding-120">
+                        <span class="tagline">Ready to Join IAMT?</span>
+                        <h2 class="margin-top-20">Take the Next Step Towards Your Career in Mobile Technology
+                        </h2>
+                        <div class="teaching-button margin-top-30">
+                            <a href="{% url "web:course" %}" class="template-btn">View Course
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    {% if students %}
+    <section class="team-section padding-top-115 padding-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Meet Our Experts</h2>
+                        <p class="margin-top-10">At IAMT in Malappuram, Kerala, we provide expert training in smartphone servicing with 17 years of experience and 100% job placement assurance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top-50">
+                {% for student in students %}
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="{{student.image.url}}" alt="image" style="height: 255px;object-fit: cover;">
+                        </div>
+                        <div class="member-content">
+                            <h4 class="title">{{student.name}}</h4>
+                            <span>{{student.position}}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% else %}
+    {% endif %}
+
+    <!-- Feedback Section -->
+    
+
+    <!-- Blog Section -->
+    {% if blogs %}
+    <section class="blog-section blog-section-2 padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>News & Updates </h2>
+                        <p class="margin-top-10">Stay Informed About the Latest Happenings at IAMT</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider margin-top-30">
+                {% for blog in blogs %}
+                <div class="single-blog">
+                    <div class="blog-image">
+                        <a href="{{ blog.get_absolute_url }}"><img src="{{ blog.image.url }}" alt="image"></a>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-title">
+                            <h4><a href="{{ blog.get_absolute_url }}">{{ blog.title|truncatechars:20 }}</a></h4>
+                        </div>
+                        <div class="content-wrap">
+                            <a href="{{ blog.get_absolute_url }}" class="post-tag">{{ blog.date|date:"d, M, Y" }}</a>
+                        </div>
+                        <div class="blog-button">
+                            <a href="{{ blog.get_absolute_url }}" class="template-btn btn-2">view more</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section> 
+    {% else %}
+    {% endif %}
+
+    <!-- Footer Section -->
+    
+
+    <!-- Back Top -->
+    <div class="back-to-top">
+        <span><i class="fa fa-angle-up"></i></span>
+    </div>
+
+{% endblock %}

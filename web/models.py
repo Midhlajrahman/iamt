@@ -114,7 +114,7 @@ class Gallery(models.Model):
         return self.title
 
 
-class Expert(models.Model):
+class GraduatedStudent(models.Model):
     name = models.CharField(max_length=100)
     position = models.CharField(max_length=100)
     image = models.ImageField(upload_to='students/')

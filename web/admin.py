@@ -50,7 +50,7 @@ class CourseOverviewAdmin(admin.ModelAdmin):
     list_display = ("title",)
     search_fields = ("title",)
 
-@admin.register(Expert)
-class CourseOverviewAdmin(admin.ModelAdmin):
+@admin.register(GraduatedStudent)
+class GraduatedStudentAdmin(admin.ModelAdmin):
     list_display = ("name","position","is_active",)
     search_fields = ("name",)

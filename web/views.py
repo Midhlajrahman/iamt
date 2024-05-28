@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView,DetailView,ListView,CreateView
-from . models import CourseOverview, Expert, Gallery, Testimonial,Course,CourseDetail,CourseFeactures,Blog,Enquiry
+from . models import CourseOverview, GraduatedStudent, Gallery, Testimonial,Course,CourseDetail,CourseFeactures,Blog,Enquiry
 from .forms import CareerForm, EnquiryForm,ContactForm
 import urllib.parse
 from django.views.generic import FormView
@@ -13,7 +13,7 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["testimonials"] = Testimonial.objects.filter(is_active=True)
         context["blogs"] = Blog.objects.filter(is_active=True)
-        context["students"] = Expert.objects.filter(is_active=True)
+        context["students"] = GraduatedStudent.objects.filter(is_active=True)
         return context
     
 
@@ -68,7 +68,7 @@ class AboutView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["testimonials"] = Testimonial.objects.filter(is_active=True)
         context["blogs"] = Blog.objects.filter(is_active=True)
-        context["students"] = Expert.objects.filter(is_active=True)
+        context["students"] = GraduatedStudent.objects.filter(is_active=True)
         return context
 
 
